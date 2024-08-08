@@ -4,8 +4,8 @@ import asyncio
 from asyncio.exceptions import TimeoutError
 from concurrent.futures import ThreadPoolExecutor
 
-from tgbot.services.requests.authentication import authentication_requests, send_code_bot
-from tgbot.services.requests.unpaid_orders.unpaid_orders import unpaid_orders_requests
+from bottaxi.services.requests.authentication import authentication_requests, send_code_bot
+from bottaxi.services.requests.unpaid_orders.unpaid_orders import unpaid_orders_requests
 
 
 async def settings_for_select_period_unpaid_orders(obj, session, phone, taxi_id, interval):
