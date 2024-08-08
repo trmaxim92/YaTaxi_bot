@@ -6,18 +6,17 @@ from aiogram.types import Message, CallbackQuery
 from aiogram.dispatcher.filters import CommandStart
 from aiogram.dispatcher import FSMContext
 
-from tgbot.keyboards.inline_users import callback_earnings, callback_unpaid, cancel_order_keyboard, earnings_keyboard, \
+from bottaxi.keyboards.inline_users import callback_earnings, callback_unpaid, cancel_order_keyboard, earnings_keyboard, \
     order_types, unpaid_orders_keyboard
-from tgbot.keyboards.user_button import choose_menu_for_user
-from tgbot.misc.states import RegisterState
-from tgbot.models.query import access_debt_mode, add_or_update_smz_user, get_info_from_help, get_user
-from tgbot.services.other_functions.conts import list_months
-from tgbot.services.requests.earnings.setting_earning_driver import settings_for_select_period_earnings_driver
-from tgbot.services.requests.limit.choose_payment_method import change_of_payment_method
-from tgbot.services.requests.order.choose_order_method import change_working_order_method
-from tgbot.services.requests.smz.switch_smz_method import on_or_off_smz_method
-from tgbot.services.requests.unpaid_orders.setting_up_unpaid_orders import settings_for_select_period_unpaid_orders
-from tgbot.services.set_commands import set_default_commands
+from bottaxi.keyboards.user_button import choose_menu_for_user
+from bottaxi.misc.states import RegisterState
+from bottaxi.models.query import access_debt_mode, add_or_update_smz_user, get_info_from_help, get_user
+from bottaxi.services.other_functions.conts import list_months
+from bottaxi.services.requests.earnings.setting_earning_driver import settings_for_select_period_earnings_driver
+from bottaxi.services.requests.limit.choose_payment_method import change_of_payment_method
+from bottaxi.services.requests.order.choose_order_method import change_working_order_method
+from bottaxi.services.requests.unpaid_orders.setting_up_unpaid_orders import settings_for_select_period_unpaid_orders
+from bottaxi.services.set_commands import set_default_commands
 
 
 async def user_start(message: Message, session, state: FSMContext):
@@ -528,4 +527,3 @@ def register_user(dp: Dispatcher):
     dp.register_message_handler(get_earnings, text='💰Заработок')
     dp.register_callback_query_handler(select_period_earnings, text=callback_earnings)
     dp.register_callback_query_handler(cancel_earnings, text='earnings_cancel')
-    dp.register_message_handler(connection_smz, text=['🔴СМЗ', '🟢СМЗ'])
