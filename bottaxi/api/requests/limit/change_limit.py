@@ -8,7 +8,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
 
-from tgbot.services.requests.settings_driver import add_cookies, options_driver
+from bottaxi.services.requests.settings_driver import add_cookies, options_driver
 
 from dotenv import load_dotenv
 
