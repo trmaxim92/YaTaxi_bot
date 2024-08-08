@@ -10,8 +10,8 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 
-from tgbot.services.requests.general_requests import general_calendars
-from tgbot.services.requests.settings_driver import add_cookies, options_driver
+from bottaxi.services.requests.general_requests import general_calendars
+from bottaxi.services.requests.settings_driver import add_cookies, options_driver
 
 from dotenv import load_dotenv
 

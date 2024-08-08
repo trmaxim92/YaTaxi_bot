@@ -5,8 +5,8 @@ import asyncio
 from asyncio.exceptions import TimeoutError
 from concurrent.futures import ThreadPoolExecutor
 
-from tgbot.services.requests.authentication import authentication_requests, send_code_bot
-from tgbot.services.requests.limit.change_limit import change_limit_requests
+from bottaxi.services.requests.authentication import authentication_requests, send_code_bot
+from bottaxi.services.requests.limit.change_limit import change_limit_requests
 
 
 async def change_of_payment_method(obj, session, limit, phone, taxi_id):

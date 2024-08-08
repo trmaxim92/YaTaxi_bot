@@ -5,9 +5,9 @@ import asyncio
 from asyncio.exceptions import TimeoutError
 from concurrent.futures import ThreadPoolExecutor
 
-from tgbot.keyboards.inline_users import order_processing
-from tgbot.services.requests.authentication import authentication_requests, send_code_bot
-from tgbot.services.requests.order.work_with_order import working_order_requests
+from bottaxi.keyboards.inline_users import order_processing
+from bottaxi.services.requests.authentication import authentication_requests, send_code_bot
+from bottaxi.services.requests.order.work_with_order import working_order_requests
 
 from aiogram.types import Message
 

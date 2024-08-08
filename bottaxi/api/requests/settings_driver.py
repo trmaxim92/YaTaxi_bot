@@ -15,11 +15,7 @@ import pickle
 
 
 load_dotenv()
-# тестовые url для определения опций и проверок
-# url = 'https://ifconfig.co/'
-# url = 'https://www.whatismybrowser.com/detect/what-is-my-user-agent/'
-# url = 'https://2ip.ru/?ysclid=lgii8oi64t450760997'
-# url = 'https://intoli.com/blog/not-possible-to-block-chrome-headless/chrome-headless-test.html'
+
 
 
 # установка прокси

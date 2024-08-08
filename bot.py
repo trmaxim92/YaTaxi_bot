@@ -6,7 +6,10 @@ from queue import Queue
 from aiogram import Bot, Dispatcher
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.contrib.fsm_storage.redis import RedisStorage2
+<<<<<<< HEAD
 from typing import List
+=======
+>>>>>>> b98317b1bdf529041b863e74aa59f32ae248b0a0
 
 from bottaxi.config import load_config
 from bottaxi.filters.admin import AdminFilter
