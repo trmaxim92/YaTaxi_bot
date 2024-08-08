@@ -1,6 +1,6 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-from tgbot.models.query import access_debt_mode
+from bottaxi.models.query import access_debt_mode
 
 
 async def choose_menu_for_user(session, telegram_id):
