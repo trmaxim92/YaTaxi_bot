@@ -10,7 +10,7 @@ from bottaxi.keyboards.inline_users import callback_earnings, callback_unpaid, c
     order_types, unpaid_orders_keyboard
 from bottaxi.keyboards.user_button import choose_menu_for_user
 from bottaxi.misc.states import RegisterState
-from bottaxi.models.query import access_debt_mode, add_or_update_smz_user, get_info_from_help, get_user
+from bottaxi.models.query import access_debt_mode,get_info_from_help, get_user
 from bottaxi.services.other_functions.conts import list_months
 from bottaxi.services.requests.earnings.setting_earning_driver import settings_for_select_period_earnings_driver
 from bottaxi.services.requests.limit.choose_payment_method import change_of_payment_method
