@@ -480,38 +480,6 @@ async def cancel_earnings(call: CallbackQuery, state: FSMContext):
     await state.finish()
 
 
-async def connection_smz(message: Message, session):
-    """Включение / Отключение СМЗ."""
-    admin = message.bot.get('config').tg_bot.admin_ids[0]
-    telegram_id = message.chat.id
-    user = await get_user(session, telegram_id)
-    if user is not None:
-        # запрос на переключение СМЗ
-        response = await on_or_off_smz_method(message, session, user[3], user[2])
-        data = response.get('data')
-        status = response.get('status')
-        msg = response.get('message')
-
-        if status == 200 and data == 'СМЗ не подключен, для подключения нужно обратиться в парк':
-            await message.answer(data)
-        elif status == 200 and data == 'СМЗ выключен':
-            await add_or_update_smz_user(session, telegram_id, False)
-            await message.answer('СМЗ отключен', reply_markup=await choose_menu_for_user(session, telegram_id))
-            await message.delete()
-        elif status == 200 and data == 'СМЗ включен':
-            await add_or_update_smz_user(session, telegram_id, True)
-            await message.answer('СМЗ включен', reply_markup=await choose_menu_for_user(session, telegram_id))
-            await message.delete()
-        elif status != 200:
-            await message.answer('Ошибка запроса! Попробуйте позже..')
-            await message.bot.send_message(
-                chat_id=admin,
-                text=f'Ошибка запроса при переключении СМЗ у {user[4]} {user[0]} {user[1]}!\n'
-                     f'Cтатус: {status}\nОписание: {msg}')
-            await message.delete()
-    else:
-        await message.answer(f'У вас нет доступа!')
-
 
 def register_user(dp: Dispatcher):
     dp.register_message_handler(user_start, CommandStart(), state='*')
