@@ -5,15 +5,15 @@ from aiogram.dispatcher import Dispatcher
 
 from sqlalchemy.exc import IntegrityError
 
-from tgbot.keyboards.inline_admin import access, access_debt, account, agree_text, edit_cancel, reset_user_removal, \
+from bottaxi.keyboards.inline_admin import access, access_debt, account, agree_text, edit_cancel, reset_user_removal, \
     help_keyboard
-from tgbot.keyboards.user_button import choose_menu_for_user
-from tgbot.misc.states import AccountParkState, CodeConfirmState, DeleteState, EditState, HelpState, NewSendState, \
+from bottaxi.keyboards.user_button import choose_menu_for_user
+from bottaxi.misc.states import AccountParkState, CodeConfirmState, DeleteState, EditState, HelpState, NewSendState, \
     RegisterState
-from tgbot.models.query import (add_or_update_limit_user, add_or_update_text_for_help, add_user, delete_access_user,
+from bottaxi.models.query import (add_or_update_limit_user, add_or_update_text_for_help, add_user, delete_access_user,
                                 drop_user, get_all_users, get_user_unique_phone, update_account_password)
-from tgbot.services.api.get_list_drivers import get_driver_profile
-from tgbot.services.set_commands import commands, set_default_commands
+from bottaxi.services.api.get_list_drivers import get_driver_profile
+from bottaxi.services.set_commands import commands, set_default_commands
 
 
 async def admin_start(message: Message):
