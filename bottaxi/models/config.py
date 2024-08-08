@@ -3,7 +3,7 @@ from typing import Callable, AsyncContextManager
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.ext.asyncio import async_sessionmaker
 
-from tgbot.config import DbConfig
+from bottaxi.config import DbConfig
 
 
 async def create_session_pool(db: DbConfig, echo=False) -> Callable[[], AsyncContextManager[AsyncSession]]:
