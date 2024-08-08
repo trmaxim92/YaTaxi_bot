@@ -8,7 +8,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
 import pickle
 
-from tgbot.services.requests.settings_driver import options_driver
+from bottaxi.services.requests.settings_driver import options_driver
 
 from aiogram.types import Message
 
