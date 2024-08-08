@@ -81,7 +81,7 @@ def authentication_requests(queue, pass_park):
         # выбор парка такси
         # choice_park = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'ParkButton_container__ALtGi')))
         # park = browser.find_element(by=By.TAG_NAME, value='span').text
-        # if park == 'Фартовый':
+        # if park == 'Название парка':
         #     choice_park.click()
 
         # сохранение куки после авторизации для дальнейших запросов
